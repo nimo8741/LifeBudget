@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             x:Class="LifeBudget.Views.Menu.newUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Instruction" Margin="0,20,0,8" Text="Welcome new user!"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="32"
+               />
+
+            <Entry x:Name="userName_box" Margin="20,0,20,0" IsSpellCheckEnabled="False" Placeholder="Username" FontSize="24"/>
+
+            <Grid HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" RowSpacing="5" ColumnSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="digit1" Grid.Row="0" Grid.Column="0" Placeholder="X" IsEnabled="True" IsVisible="True" HorizontalTextAlignment="Center" FontSize="24" TextColor="Black" Opacity="1" InputTransparent="True"/>
+                <Entry x:Name="digit2" Grid.Row="0" Grid.Column="1" Placeholder="X" IsEnabled="True" IsVisible="True" HorizontalTextAlignment="Center" FontSize="24" TextColor="Black" Opacity="1" InputTransparent="True"/>
+                <Entry x:Name="digit3" Grid.Row="0" Grid.Column="2" Placeholder="X" IsEnabled="True" IsVisible="True" HorizontalTextAlignment="Center" FontSize="24" TextColor="Black" Opacity="1" InputTransparent="True"/>
+                <Entry x:Name="digit4" Grid.Row="0" Grid.Column="3" Placeholder="X" IsEnabled="True" IsVisible="True" HorizontalTextAlignment="Center" FontSize="24" TextColor="Black" Opacity="1" InputTransparent="True"/>
+
+            </Grid>
+
+            <Grid x:Name="PinGrid" Margin="0,15,0,0" HorizontalOptions="CenterAndExpand" RowSpacing="13" ColumnSpacing="13">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="button1" Grid.Row="0" Grid.Column="0" Text="1" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button1_Clicked"/>
+                <Button x:Name="button2" Grid.Row="0" Grid.Column="1" Text="2" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button2_Clicked"/>
+                <Button x:Name="button3" Grid.Row="0" Grid.Column="2" Text="3" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button3_Clicked"/>
+                <Button x:Name="button4" Grid.Row="1" Grid.Column="0" Text="4" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button4_Clicked"/>
+                <Button x:Name="button5" Grid.Row="1" Grid.Column="1" Text="5" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button5_Clicked"/>
+                <Button x:Name="button6" Grid.Row="1" Grid.Column="2" Text="6" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button6_Clicked"/>
+                <Button x:Name="button7" Grid.Row="2" Grid.Column="0" Text="7" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button7_Clicked"/>
+                <Button x:Name="button8" Grid.Row="2" Grid.Column="1" Text="8" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button8_Clicked"/>
+                <Button x:Name="button9" Grid.Row="2" Grid.Column="2" Text="9" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button9_Clicked"/>
+                <Button x:Name="button0" Grid.Row="3" Grid.Column="1" Text="0" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="button0_Clicked"/>
+                <Button x:Name="buttonClr" Grid.Row="3" Grid.Column="0" Text="Clear" FontSize="14" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" ef:ToFlatButton.On="True" ef:ToFlatButton.RippleColor="Gray" Clicked="buttonClr_Clicked"/>
+
+            </Grid>
+
+            <Button x:Name="submit_Btn" HorizontalOptions="End" Margin="0,0,30,0" Text="Submit" WidthRequest="100" HeightRequest="50" Clicked="submit_Btn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeBudget.Views.DetailViews.Category_popup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <StackLayout Margin="12"
+                 Padding="10"
+                 Spacing="10"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Label Text="Please Enter A New Category"
+               HorizontalOptions="StartAndExpand"
+               FontSize="20"
+               Margin="20,20,20,0"/>
+        <Entry Margin="20,20,20,0"
+               x:Name="CatEntry"
+               FontSize="16"/>
+        <Button x:Name="PopupBtn"
+                Text="Enter"
+                Margin="60,30,60,10"
+                Clicked="PopupBtn_Clicked"/>
+
+    </StackLayout>
+</pages:PopupPage>

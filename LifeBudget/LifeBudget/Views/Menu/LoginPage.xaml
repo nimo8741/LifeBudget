@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+             x:Class="LifeBudget.Views.LoginPage">
+    <StackLayout>
+
+        <Image x:Name="LoginIcon" Source="LoginImage.png" Margin="0,80,0,20"/>
+        <Label x:Name="Title" Text="Welcome back to LifeBudget"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="22"
+               />
+        <Label x:Name="Instruction" Text="Enter your 4-digit pin"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="20"
+               />
+
+
+
+        <Grid x:Name="Circles" HorizontalOptions="CenterAndExpand" Padding="0,20" RowSpacing="5" ColumnSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <xfShapeView:ShapeView x:Name="digit1" Grid.Row="0" Grid.Column="0" ShapeType="Circle" IsVisible="True" BorderWidth="2" Color="Red" HeightRequest="13" WidthRequest="13"/>
+            <xfShapeView:ShapeView x:Name="digit2" Grid.Row="0" Grid.Column="1" ShapeType="Circle" IsVisible="True" BorderWidth="2" Color="Gold" HeightRequest="13" WidthRequest="13"/>
+            <xfShapeView:ShapeView x:Name="digit3" Grid.Row="0" Grid.Column="2" ShapeType="Circle" IsVisible="True" BorderWidth="2" Color="Green" HeightRequest="13" WidthRequest="13"/>
+            <xfShapeView:ShapeView x:Name="digit4" Grid.Row="0" Grid.Column="3" ShapeType="Circle" IsVisible="True" BorderWidth="2" Color="Purple" HeightRequest="13" WidthRequest="13"/>
+        </Grid>
+        
+        <Grid x:Name="PinGrid" HorizontalOptions="CenterAndExpand" RowSpacing="13" ColumnSpacing="13">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="button1" Grid.Row="0" Grid.Column="0" Text="1" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button1_Clicked"/>
+            <Button x:Name="button2" Grid.Row="0" Grid.Column="1" Text="2" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button2_Clicked"/>
+            <Button x:Name="button3" Grid.Row="0" Grid.Column="2" Text="3" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button3_Clicked"/>
+            <Button x:Name="button4" Grid.Row="1" Grid.Column="0" Text="4" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button4_Clicked"/>
+            <Button x:Name="button5" Grid.Row="1" Grid.Column="1" Text="5" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button5_Clicked"/>
+            <Button x:Name="button6" Grid.Row="1" Grid.Column="2" Text="6" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button6_Clicked"/>
+            <Button x:Name="button7" Grid.Row="2" Grid.Column="0" Text="7" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button7_Clicked"/>
+            <Button x:Name="button8" Grid.Row="2" Grid.Column="1" Text="8" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button8_Clicked"/>
+            <Button x:Name="button9" Grid.Row="2" Grid.Column="2" Text="9" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button9_Clicked"/>
+            <Button x:Name="button0" Grid.Row="3" Grid.Column="1" Text="0" FontSize="20" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="button0_Clicked"/>
+            <Button x:Name="buttonClr" Grid.Row="3" Grid.Column="0" Text="Clear" FontSize="14" WidthRequest="50" HeightRequest="50" BorderRadius="50" BorderWidth="1" BorderColor="WhiteSmoke" Clicked="buttonClr_Clicked"/>
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

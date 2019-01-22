@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeBudget.Views.DetailViews.MoneyPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Add_btn" Text="Add" Clicked="AddClicked"/>
+        <ToolbarItem x:Name="Delete_btn" Text="Delete" Clicked="DeleteClicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,20,20,20">
+                <?First will be a search bar will allow for the searching of expenses.  This will also allow for the editing and deleting of expenses   ?>
+
+                <?Second there will be a view for the last 10 expenses  ?>
+                <Frame CornerRadius="5">
+                    <StackLayout x:Name="topTenExpenses" Padding="0,0,0,0">
+                        <StackLayout x:Name="topTenConfig" Orientation="Horizontal">
+                            <Picker x:Name="ContentSelect" HorizontalOptions="StartAndExpand" WidthRequest="135" SelectedIndexChanged="ContentSelect_SelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>Spending</x:String>
+                                    <x:String>Income</x:String>
+                                    <?This is not implemented yet, don't use  ?>
+                                    <x:String>All Transactions</x:String>
+                                    <?This is not implemented yet, don't use ?>
+                                    <x:String>&lt;By Category&gt;</x:String>
+                                    <?This is not implemented yet, don't use ?>
+                                </Picker.Items>
+                                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                            </Picker>
+                            <Picker x:Name="OrderSelect" HorizontalOptions="EndAndExpand" WidthRequest="115" SelectedIndexChanged="OrderSelect_SelectedIndexChanged">
+                                <Picker.Items>
+                                    <x:String>Most Recent</x:String>
+                                    <x:String>High to Low</x:String>
+                                    <x:String>Low to High</x:String>
+                                </Picker.Items>
+                                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                            </Picker>
+                        </StackLayout>
+                        <TableView x:Name="TableMaster" Margin="10,20,10,10">
+                            <TableRoot>
+                                <TableSection x:Name="TopTenTable"/>
+                            </TableRoot>
+                        </TableView>
+                    </StackLayout>
+                </Frame>
+                <?Third will be a graph which shows the state of the expenses, income, and net money in time  ?>
+
+                <?Fourth will be a graph which shows the breakdown of the spending over the month  ?>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    

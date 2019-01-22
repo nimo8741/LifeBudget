@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeBudget.Views.DetailViews.MasterPage"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
+             Title="Hello world">
+
+    <StackLayout>
+        <StackLayout x:Name="TopStack" VerticalOptions="FillAndExpand">
+            <Label Text="LifeBudget" HorizontalOptions="Center" FontSize="24"/>
+        </StackLayout>
+        <StackLayout x:Name="MiddleStack" Margin="0,0,0,200"/>
+        <StackLayout x:Name="BottomStack" VerticalOptions="EndAndExpand">
+            <Button Text="Logout"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:DetailViews="clr-namespace:LifeBudget.Views.DetailViews;assembly=LifeBudget"
+             x:Class="LifeBudget.Views.DetailViews.MasterDetail">
+  <MasterDetailPage.Master>
+    <DetailViews:MasterPage x:Name="masterpage"/>
+  </MasterDetailPage.Master>
+  
+</MasterDetailPage>
